@@ -1,0 +1,31 @@
+import subprocess
+import re
+'''The  subprocess module to span new process'''
+def mac_check():
+    new_mac = input("Enter New MAC  address to change  :  ")
+    while True:
+        '''Check if entered mac is a correct format i.e ex:11:22:33:44:55:66'''
+        check=new_mac.split(":")
+        charRe=re.compile(r"([0-9A-F]{2}[:-]){5}([0-9A-F]{2})$") #Regex fro mac address
+        string=charRe.search(new_mac)
+        if len(check)==6 and  not bool(string) == False:
+            return new_mac
+            break
+        else:
+            new_mac = input("Enter New MAC  address to change  :  ")
+            print("Mac adddress was not correct please check")
+def mac_change(interface,new_mac): # Changing the mac_address
+    try:
+        print(f"the new nc is  {new_mac}")
+        subprocess.call("ifconfig",shell=True)# shell is True  because to run shell commands
+        subprocess.call(f"ifconfig {interface} down",shell=True) # we are macking the interface to dowm so the we can change the mac adress
+        subprocess.call(f"ifconfig {interface} hw ether {new_mac}",shell=True)
+        subprocess.call(f"ifconfig {interface} up",shell=True)# making the interface to up
+        print(f"MAC address changed to {new_mac}")
+    except: print("Cant change MAC")
+    
+interface = input("Enter the interface to change the MAC address :  ")
+'''Example eth0, lan0 '''
+
+new_mac=mac_check()
+mac_change(interface=interface,new_mac=new_mac)
