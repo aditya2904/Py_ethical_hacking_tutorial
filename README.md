@@ -40,6 +40,10 @@ Using subprocess we call the commands the we perform manually in the terminal . 
 #### Parameters that we can pas in this subprocess Module 
 subprocess.<function>(args, *, stdin=None, input=None, stdout=None, stderr=None, capture_output=False, shell=False, cwd=None, timeout=None, check=False, encoding=None, errors=None, text=None, env=None, universal_newlines=None)
 	
+## more scripts yet to come
+	
+# Note: only for etnical hacking purpose.
+	
 
 
 
