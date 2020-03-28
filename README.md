@@ -105,6 +105,22 @@ We need only answered list so we create this list.
 		- timeout is to set the program to wait for the response if we didn’t receive any response with in the time then move to the second one.
 In this script I created an additional output which will store the data in csv format.
 
+# ARP SPOOFER
+
+In computer networking, ARP spoofing, ARP cache poisoning, or ARP poison routing, is a technique by which an attacker sends (spoofed) Address Resolution Protocol (ARP) messages onto a local area network. Generally, the aim is to associate the attacker's MAC address with the IP address of another host, such as the default gateway, causing any traffic meant for that IP address to be sent to the attacker instead.
+
+ARP spoofing may allow an attacker to intercept data frames on a network, modify the traffic, or stop all traffic. Often the attack is used as an opening for other attacks, such as denial of service, man in the middle, or session hijacking attacks.
+
+The attack can only be used on networks that use ARP, and requires attacker have direct access to the local network segment to be attacked.
+
+The basic principle behind ARP spoofing is to exploit the lack of authentication in the ARP protocol by sending spoofed ARP messages onto the LAN. ARP spoofing attacks can be run from a compromised host on the LAN, or from an attacker's machine that is connected directly to the target LAN.
+
+Generally, the goal of the attack is to associate the attacker's host MAC address with the IP address of a target host, so that any traffic meant for the target host will be sent to the attacker's host. The attacker may choose to inspect the packets (spying), while forwarding the traffic to the actual default destination to avoid discovery, modify the data before forwarding it (man-in-the-middle attack), or launch a denial-of-service attack by causing some or all of the packets on the network to be dropped.
+
+![spoof pic](https://github.com/aditya2904/Py_ethical_hacking_tutorial/blob/master/Saved%20Pictures/arpspoof.png)
+
+
+
 	
 ## more scripts yet to come
 	
