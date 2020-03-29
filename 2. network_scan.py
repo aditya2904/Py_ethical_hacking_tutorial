@@ -26,6 +26,7 @@ def csv_file(data):
     # name of csv file
     filename = "newtworkscan"
     # writing to csv file
+    
     with open(f"filename.csv", 'w') as csvfile:
         # creating a csv dict writer object
         writer = csv.DictWriter(csvfile, fieldnames=fields)
