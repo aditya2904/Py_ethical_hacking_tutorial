@@ -16,6 +16,7 @@ def arp_spoof(victim_ip,spoof_ip):
     # hwst = target machine mac address
     #psrc= gateway ip address
     scapy.send(packet)
+    
     # Scapy.send will send the packet to change the mac address.
 def restore(destination_ip,source_ip):
     '''this is the most important as when we completed the attack we need to restore the mac address in ARP Table so we crate a another
